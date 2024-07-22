@@ -1,0 +1,51 @@
+{
+    "hosting": {
+        "source": ".",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    },
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "conta-azul-flutter",
+                    "appId": "1:592824834971:android:9ac8b685e0b7199c6b5f3e",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "conta-azul-flutter",
+                    "appId": "1:592824834971:ios:bdaf9208c58efce26b5f3e",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "macos": {
+                "default": {
+                    "projectId": "conta-azul-flutter",
+                    "appId": "1:592824834971:ios:bdaf9208c58efce26b5f3e",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "macos/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/src/core/config/firebase_options.dart": {
+                    "projectId": "conta-azul-flutter",
+                    "configurations": {
+                        "android": "1:592824834971:android:9ac8b685e0b7199c6b5f3e",
+                        "ios": "1:592824834971:ios:bdaf9208c58efce26b5f3e",
+                        "macos": "1:592824834971:ios:bdaf9208c58efce26b5f3e",
+                        "web": "1:592824834971:web:05442c7621b84ace6b5f3e",
+                        "windows": "1:592824834971:web:ac69df82231eb4366b5f3e"
+                    }
+                }
+            }
+        }
+    }
+}

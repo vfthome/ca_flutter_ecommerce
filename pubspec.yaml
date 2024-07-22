@@ -1,5 +1,7 @@
+#! --- PROJECT CONFIGS ---
 name: ca_flutter_test
 description: "Conta Azul - Flutter Test"
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -18,9 +20,11 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
+#! --- SDK VERSION ---
 environment:
   sdk: '>=3.4.3 <4.0.0'
 
+  #! --- PRODUCTION DEPENDENCIES ---
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -31,48 +35,62 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.6
-
-  #! --- PACKAGES ---
-  #? --- CORE
   # STATE MANAGEMENT:
   # Reference: https://asp.flutterando.com.br/docs/introduction/getting-started
   asp: ^2.0.0
+
   # ROUTING AND INJECTION:
   # Reference: https://www.youtube.com/watch?v=EdHbE817gyo
   flutter_modular: ^6.3.4
-  #? --- ICON AND SPLASH ART
+
   # CHANGE DEFAULT NATIVE SPLASH SCREEN:
   # Reference: https://www.youtube.com/watch?v=x0a6_ILbvAk
   flutter_native_splash: ^2.4.1
+
   # CHANGE DEFAULT APP ICON:
   # Reference: https://www.youtube.com/watch?v=_GdG4u7hfAM
   flutter_launcher_icons: ^0.13.1
-  #? --- ...
+
+  # HTTP CLIENT:
+  # Reference: https://pub.dev/packages/http
+  http: ^1.2.2
+  
+  # SVG RENDERING:
+  # Reference: https://pub.dev/packages/flutter_svg
+  flutter_svg: ^2.0.10+1
+
+  # BACKEND SERVICES:
+  # Reference: https://pub.dev/packages/firebase_core
+  firebase_core: ^2.24.2
+  # Reference: https://pub.dev/packages/firebase_auth
+  firebase_auth: ^4.16.0
+  auto_size_text: ^3.0.0
+  vibration: ^1.9.0
+  flutter_animate: ^4.5.0
+  equatable: ^2.0.5
 
 #! --- DEVELOPMENT DEPENDENCIES ---
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
-  #? --- ASSETS CLASS
-  # REQUIRED BY FLUTTER_GEN_RUNNER:
-  build_runner: ^2.4.11
-  # ASSET CLASS GENERATION:
-  flutter_gen_runner: ^5.6.0
 
-#! --- PACKAGES CONFIGURATIONS ---
-#? Must be at 1st level of pubspec.yaml indentation
+  # AUTOMATIC ASSET CLASS GENERATION:
+  # Reference: https://pub.dev/packages/flutter_gen
+  flutter_gen_runner: ^5.6.0
+  # Reference: https://pub.dev/packages/build_runner
+  build_runner: ^2.4.11
+
+#! --- DEPENDENCIES CONFIGURATIONS ---
 # FLUTTER GEN RUNNER (ASSETS CLASS GENERATION):
 flutter_gen:
-  output: lib/shared/assets/ # Optional (default: lib/gen/)
+  output: lib/src/shared/design_system/config/ # Optional (default: lib/gen/)
   line_length: 80 # Optional (default: 80)
   # Optional
   integrations:
@@ -80,6 +98,7 @@ flutter_gen:
     flare_flutter: true
     rive: true
     lottie: true
+
 # FLUTTER NATIVE SPLASH:
 flutter_native_splash:
   color: "#00B2F6"
@@ -88,6 +107,7 @@ flutter_native_splash:
     color: "#00B2F6"
     image: "assets/images/app_icon_android_12.png"
     icon_background_color: "#00B2F6"
+
 # FLUTTER LAUNCHER ICONS:
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -116,7 +136,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  #! --- CUSTOM ASSETS ---
+  #! --- ASSET IMPORTS ---
   assets:
   # IMAGES
     - assets/images/
@@ -125,7 +145,7 @@ flutter:
   # SVG
     - assets/svg/
 
-  #! --- CUSTOM FONTS ---
+  #! --- FONT CONFIGS ---
   fonts:
   #? Housechka Pro - Font Family
     - family: HouschkaPro
@@ -174,7 +194,7 @@ flutter:
           weight: 100
 
 #! ------------------------------------------------------------------------------------------------------
-#! ------------------------ COMMAND LINE USAGE OF SPECIFIC PACKAGES -------------------------------------
+#! -------------------------------------- COMMANDS CHEAT SHEET ------------------------------------------
 #! ------------------------------------------------------------------------------------------------------
 
 #! ----------------------------------------------------------
