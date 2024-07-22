@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "592824834971",
+    "project_id": "conta-azul-flutter",
+    "storage_bucket": "conta-azul-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592824834971:android:9ac8b685e0b7199c6b5f3e",
+        "android_client_info": {
+          "package_name": "com.contaazul.fluttertest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR7OiaXIEEshJbIWAf5NQeb7bH0Gosy7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
