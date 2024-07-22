@@ -167,4 +167,4 @@ Package Adopted: asp
 
 ### 6) Use the company software architecture, and good luck
 
-![White 2](assets/images/vfthome.png)
+<img src="assets/images/vfthome.png" alt="vfthome" width="200"/>
