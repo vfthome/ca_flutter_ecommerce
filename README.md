@@ -4,17 +4,17 @@
 
 [GitHub - dtodt/ca_flutter_test: Conta Azul Flutter Test](https://github.com/dtodt/ca_flutter_test/tree/main)
 
-## Proposed Solution
+### Proposed Solution
 
 [Development process, step by step.](https://www.notion.so/Development-process-step-by-step-4e43efdbac7a4b1fabb6dea79f701ed0?pvs=21)
 
-## Figma Design System & Frontend Reference (Created by VFTHOME)
+### Figma Design System & Frontend Reference (Created by VFTHOME)
 
 [FIGMA DESIGN SYSTEM & FRONTEND REFERENCE](https://www.figma.com/design/ih1CrRG72WDo9BhaG3OZvf/Conta-Azul---Flutter-Test?node-id=17-58&t=GLcg6x2M8z6AGA6T-1)
 
-# E-commerce Instructions
+## E-commerce Instructions
 
-## Features Required
+### Features Required
 
 > The project goal is to develop a mobile application with test coverage and the following features:
 
@@ -28,18 +28,18 @@
 
 > The proposed software architecture used by the project is detailed below, including MiniCore Arc images and diagrams.
 
-## Architecture Reference
+### Architecture Reference
 
 [ARCHITECTURE.md](https://github.com/dtodt/ca_flutter_test/blob/main/ARCHITECTURE.md)
 
-## Additional Documentation
+### Additional Documentation
 
 - **MiniCore Arc - Documentation:**
 
     **Software architecture proposal for Flutter/Dart**
     *Inspired by Robert C. Martin’s - Clean Architecture.*
 
-    ![MiniCore Arc](https://prod-files-secure.s3.us-west-2.amazonaws.com/79bd2752-2185-48db-89c9-3d5ee11bb8de/bbfe52aa-e946-44f2-8038-a1b1c1c4244b/Untitled.png)
+    ![MiniCore Arc](https://github.com/Flutterando/minicore/raw/main/imgs/image2.png)
 
     1. **UI (Presentation Layer):** Flutter widgets that compose the user interfaces of the application.
     2. **Interactor (Business Logic Layer):** Responsible for defining business logic of the feature, managing its state, entities, interfaces, repositories, services, validations, DTOs, and current state.
@@ -51,20 +51,20 @@
 
 - **Flutter TDD - Step by step:**
 
-# General Rules - Must Read
+## General Rules - Must Read
 
-## 1) Commits
+### 1) Commits
 
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-### Common commit title types
+#### Common commit title types
 
 - [FIX]
 - [FEAT]
 - [BREAKING CHANGE]
 - Other used titles: build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test.
 
-### Commit Structure
+#### Commit Structure
 
 > [TYPE_CHOOSEN] FEATURE_NAME: mandatory description text goes here…
 >
@@ -72,7 +72,7 @@
 >
 > [Optional footer → “ Best regards, Vitor F. Thomé. ”]
 
-## 2) Language & Naming Conventions
+### 2) Language & Naming Conventions
 
 Language used in the project is English. All comments and naming conventions should be in English and follow the rules below:
 
@@ -136,7 +136,7 @@ Keep these files inside the feature that they belong or in a `shared` folder if 
 
 > Special case for pages if using routefly, they are kept inside the `(public)` folder.
 
-## 3) Dependency Injection
+### 3) Dependency Injection
 
 Package Adopted: flutter_modular
 
@@ -144,7 +144,7 @@ Package Adopted: flutter_modular
 - [Video tutorial](https://www.youtube.com/watch?v=EdHbE817gyo)
 - [Documentation - GitHub](https://github.com/Flutterando/modular)
 
-## 4) App Routes
+### 4) App Routes
 
 Package Adopted: flutter_modular
 
@@ -152,7 +152,7 @@ Package Adopted: flutter_modular
 - [Video tutorial](https://www.youtube.com/watch?v=EdHbE817gyo)
 - [Documentation - GitHub](https://github.com/Flutterando/modular)
 
-## 5) State Management
+### 5) State Management
 
 Package Adopted: asp
 
@@ -165,6 +165,6 @@ Package Adopted: asp
 - [Documentation - GitHub](https://github.com/Flutterando/asp)
 - [Documentation - Flutterando](https://asp.flutterando.com.br)
 
-## 6) Use the company software architecture, and good luck
+### 6) Use the company software architecture, and good luck
 
-![White 2](https://prod-files-secure.s3.us-west-2.amazonaws.com/79bd2752-2185-48db-89c9-3d5ee11bb8de/8f3ad8b1-21a4-4843-874a-d329dc49d6a2/White_2.png)
+![White 2](assets/images/vfthome.png)
