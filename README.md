@@ -165,6 +165,6 @@ Package Adopted: asp
 - [Documentation - GitHub](https://github.com/Flutterando/asp)
 - [Documentation - Flutterando](https://asp.flutterando.com.br)
 
-### 6) Use the company software architecture, and good luck
+### 6) Use the company software architecture, and good luck!
 
-<img src="assets/images/vfthome.png" alt="vfthome" width="200"/>
+<img src="assets/images/vfthome.png" alt="vfthome" width="400"/>
