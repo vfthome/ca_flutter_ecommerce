@@ -71,6 +71,21 @@
 > [OPTIONAL BODY HERE]
 >
 > [Optional footer → “ Best regards, Vitor F. Thomé. ”]
+>
+> EXAMPLE:
+>
+> [FEAT] Onboarding Feature: fully functional onboarding feature.
+>
+> Changelog:
+>
+> - Shared widgets updated.
+> - Core project interfaces updated.
+> - Assets added.
+> - Design System improvements.
+> - Testing architecture using a StateEntity for housing feature atoms.
+> - Development of business logic for Onboarding feature.
+
+Best regards, Vitor.
 
 ### 2) Language & Naming Conventions
 
