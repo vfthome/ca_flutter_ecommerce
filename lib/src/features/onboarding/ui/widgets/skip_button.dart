@@ -18,6 +18,8 @@ class SkipButton extends StatelessWidget {
 
       // Subscribe to onboarding page events
       final currentPage = get(onboardingController.state.currentPageAtom);
+      // Subscribe to onboarding page events
+      get(onboardingController.state.scrollEndedAtom);
 
       return AnimatedOpacity(
         opacity: currentPage > 0 ? 1 : 0,
@@ -32,8 +34,11 @@ class SkipButton extends StatelessWidget {
             child: Stack(
               children: [
                 //* Button BG
-                Container(
-                  color: ds.colors.lightContainer,
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 300),
+                  color: !onboardingController.state.scrollEndedAtom.state
+                      ? ds.colors.lightContainer.withOpacity(0.3)
+                      : ds.colors.lightContainer,
                 ),
 
                 //* Button Content
@@ -52,11 +57,15 @@ class SkipButton extends StatelessWidget {
                 ),
 
                 //* Button gesture detector
-                TransparentButton(
-                  onTap: () {
-                    onboardingController.clickSkipButton();
-                  },
-                ),
+                !onboardingController.state.scrollEndedAtom.state
+                    ? const SizedBox()
+                    : TransparentButton(
+                        onTap: () {
+                          onboardingController.state.scrollEndedAtom.state
+                              ? onboardingController.clickSkipButton()
+                              : null;
+                        },
+                      ),
               ],
             ),
           ),

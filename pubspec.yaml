@@ -64,10 +64,26 @@ dependencies:
   firebase_core: ^2.24.2
   # Reference: https://pub.dev/packages/firebase_auth
   firebase_auth: ^4.16.0
+
+  # TEXT RESIZING:
+  # Reference: https://pub.dev/packages/auto_size_text
   auto_size_text: ^3.0.0
+
+  # CUSTOM HAPTIC FEEDBACK:
+  # Reference: https://pub.dev/packages/vibration
   vibration: ^1.9.0
+
+  # CUSTOM ANIMATIONS:
+  # Reference: https://pub.dev/packages/flutter_animate
   flutter_animate: ^4.5.0
+
+  # CLASS EQUALITY:
+  # Reference: https://pub.dev/packages/equatable
   equatable: ^2.0.5
+
+  # LOCAL STORAGE:
+  # Reference: https://pub.dev/packages/shared_preferences
+  shared_preferences: ^2.2.3
 
 #! --- DEVELOPMENT DEPENDENCIES ---
 dev_dependencies:
@@ -86,6 +102,9 @@ dev_dependencies:
   flutter_gen_runner: ^5.6.0
   # Reference: https://pub.dev/packages/build_runner
   build_runner: ^2.4.11
+
+  # MOCKS AND TESTS:
+  mockito: ^5.4.4
 
 #! --- DEPENDENCIES CONFIGURATIONS ---
 # FLUTTER GEN RUNNER (ASSETS CLASS GENERATION):

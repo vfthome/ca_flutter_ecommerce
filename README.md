@@ -31,6 +31,7 @@
 ### Architecture Reference
 
 [ARCHITECTURE.md](https://github.com/dtodt/ca_flutter_test/blob/main/ARCHITECTURE.md)
+[TDD - Test Driven Design with Clean Architecture](https://resocoder.com/2019/08/27/flutter-tdd-clean-architecture-course-1-explanation-project-structure/)
 
 ### Additional Documentation
 

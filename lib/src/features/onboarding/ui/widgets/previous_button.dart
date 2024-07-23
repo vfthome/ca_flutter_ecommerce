@@ -56,7 +56,9 @@ class PreviousButton extends StatelessWidget {
                   //* Button gesture detector
                   TransparentButton(
                     onTap: () {
-                      onboardingController.clickPreviousButton();
+                      onboardingController.state.scrollEndedAtom.state
+                          ? onboardingController.clickPreviousButton()
+                          : null;
                     },
                   ),
                 ],

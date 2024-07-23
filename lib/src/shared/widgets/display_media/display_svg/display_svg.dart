@@ -19,15 +19,15 @@ class DisplaySvg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (
-        context,
-        constraints,
-      ) {
-        return SizedBox(
-          height: height,
-          width: width,
-          child: SvgPicture.asset(
+    return SizedBox(
+      height: height,
+      width: width,
+      child: LayoutBuilder(
+        builder: (
+          context,
+          constraints,
+        ) {
+          return SvgPicture.asset(
             svgPath,
             fit: fit ?? BoxFit.contain,
             width: double.infinity,
@@ -35,9 +35,9 @@ class DisplaySvg extends StatelessWidget {
             colorFilter: color != null
                 ? ColorFilter.mode(color!, BlendMode.srcIn)
                 : null,
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

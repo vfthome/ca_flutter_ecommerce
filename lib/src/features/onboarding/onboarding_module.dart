@@ -25,12 +25,10 @@ class OnboardingModule extends Module {
     i.add<IOnboardingDatasource>(OnboardingDatasource.new);
     i.add<IOnboardingRepository>(OnboardingRepository.new);
     i.addSingleton<IOnboardingControllerService>(
-      () {
-        return OnboardingControllerService(
-          featureRepository: i.get<IOnboardingRepository>(),
-          initialState: OnboardingStateEntity.initial(),
-        );
-      },
+      () => OnboardingControllerService(
+        featureRepository: i.get<IOnboardingRepository>(),
+        initialState: OnboardingStateEntity.initial(),
+      ),
     );
   }
 
@@ -39,25 +37,14 @@ class OnboardingModule extends Module {
   List<Module> get imports => [
         // --- CORE MODULE ---
         CoreModule(),
-
-        // --- IMPORTED MODULES ---
-
-        // ...
       ];
 
   //* --- EXPORTED CLASS INSTANCES (BINDS) ---
   @override
   void routes(RouteManager r) {
     // --- MAIN ROUTE ---
-    r.child(
-      '/',
-      child: (context) {
-        return const OnboardingPage();
-      },
-    );
-
-    // --- OTHER ROUTES ---
-
-    // ...
+    r.child('/', child: (context) {
+      return const OnboardingPage();
+    });
   }
 }

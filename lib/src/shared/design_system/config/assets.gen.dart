@@ -87,6 +87,10 @@ class $AssetsImagesGen {
   AssetGenImage get discountProduct =>
       const AssetGenImage('assets/images/discount_product.png');
 
+  /// File path: assets/images/filter_bar.png
+  AssetGenImage get filterBar =>
+      const AssetGenImage('assets/images/filter_bar.png');
+
   /// File path: assets/images/onboarding_1.png
   AssetGenImage get onboarding1 =>
       const AssetGenImage('assets/images/onboarding_1.png');
@@ -107,16 +111,21 @@ class $AssetsImagesGen {
   AssetGenImage get signUpIdCard =>
       const AssetGenImage('assets/images/sign_up_id_card.png');
 
+  /// File path: assets/images/vfthome.png
+  AssetGenImage get vfthome => const AssetGenImage('assets/images/vfthome.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         appIcon,
         appIconAndroid12,
         discountProduct,
+        filterBar,
         onboarding1,
         onboarding2,
         onboarding3,
         profilePicture,
-        signUpIdCard
+        signUpIdCard,
+        vfthome
       ];
 }
 
@@ -162,6 +171,9 @@ class $AssetsSvgGen {
   SvgGenImage get returnArrow =>
       const SvgGenImage('assets/svg/return_arrow.svg');
 
+  /// File path: assets/svg/search.svg
+  SvgGenImage get search => const SvgGenImage('assets/svg/search.svg');
+
   /// File path: assets/svg/sort.svg
   SvgGenImage get sort => const SvgGenImage('assets/svg/sort.svg');
 
@@ -183,6 +195,7 @@ class $AssetsSvgGen {
         logoLeafs,
         offline,
         returnArrow,
+        search,
         sort,
         vfthomeLogo
       ];

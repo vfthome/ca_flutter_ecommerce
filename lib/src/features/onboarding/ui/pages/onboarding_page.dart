@@ -20,7 +20,7 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, HookStateMixin {
   //* --- PARAMETERS ---
   late PageController _controller;
   final onboardingService = Modular.get<IOnboardingControllerService>();
@@ -38,11 +38,11 @@ class _OnboardingPageState extends State<OnboardingPage>
     // SCROLL EVENT SUBSCRIPTION
     _controller.addListener(
       () {
-        debugPrint('Controller value: ${_controller.page}');
-        onboardingService.scrollEvent(
-          currentPage: (_controller.page ?? 0).round(),
-        );
-        onboardingService.buttonVisibility();
+        if (mounted) {
+          onboardingService.scrollEvent(
+            currentPage: (_controller.page ?? 0).round(),
+          );
+        }
       },
     );
   }

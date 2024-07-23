@@ -2,8 +2,6 @@
 final class Routes {
   const Routes();
 
-  String get auth => '/auth' '/';
-  String get favorites => '/favorites' '/';
-  String get home => '/home' '/';
+  String get productStore => '/product_store' '/';
   String get onboarding => '/onboarding' '/';
 }

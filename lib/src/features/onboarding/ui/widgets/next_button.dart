@@ -24,6 +24,8 @@ class NextButton extends StatelessWidget {
       // Subscribe to onboarding page events
       final enterButtonVisible =
           get(onboardingController.state.displayEnterButtonAtom);
+      // Subscribe to onboarding page events
+      get(onboardingController.state.scrollEndedAtom);
 
       return ClipRRect(
         borderRadius: BorderRadius.only(
@@ -31,7 +33,9 @@ class NextButton extends StatelessWidget {
         ),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          color: ds.colors.lightContainer,
+          color: !onboardingController.state.scrollEndedAtom.state
+              ? ds.colors.lightContainer.withOpacity(0.3)
+              : ds.colors.lightContainer,
           width: enterButtonVisible ? deviceWidth : 134 * figmaWidth,
           height: 69 * figmaHeight,
           child: Stack(
@@ -67,13 +71,17 @@ class NextButton extends StatelessWidget {
               ),
 
               //* Button gesture detector
-              TransparentButton(
-                onTap: () {
-                  enterButtonVisible
-                      ? onboardingController.clickEnterButton()
-                      : onboardingController.clickNextButton();
-                },
-              ),
+              !onboardingController.state.scrollEndedAtom.state
+                  ? const SizedBox()
+                  : TransparentButton(
+                      onTap: () {
+                        onboardingController.state.scrollEndedAtom.state
+                            ? enterButtonVisible
+                                ? onboardingController.clickEnterButton()
+                                : onboardingController.clickNextButton()
+                            : null;
+                      },
+                    ),
             ],
           ),
         ),
