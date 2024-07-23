@@ -48,7 +48,7 @@ void main() {
       }
       expectedString.addAll({'products': productsList});
       // act
-      final result = ProductsDTO(products: products).toJson();
+      final result = const ProductsDTO(products: products).toJson();
       // assert
       expect(result, expectedString);
     });
