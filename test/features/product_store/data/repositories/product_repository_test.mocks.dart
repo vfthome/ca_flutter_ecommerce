@@ -5,12 +5,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
+import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_discount_remote_ds.dart'
+    as _i6;
 import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_favorite_products_ds.dart'
     as _i5;
 import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_products_remote_ds.dart'
     as _i2;
-import 'package:ca_flutter_test/src/features/product_store/interactor/dtos/products_dto.dart'
-    as _i6;
 import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_entity.dart'
     as _i4;
 import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_network_status_service.dart'
@@ -65,17 +65,23 @@ class MockIFavoriteProductsDataSource extends _i1.Mock
         returnValueForMissingStub:
             _i3.Future<List<_i4.ProductEntity>>.value(<_i4.ProductEntity>[]),
       ) as _i3.Future<List<_i4.ProductEntity>>);
+}
 
+/// A class which mocks [IDiscountRemoteDataSource].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockIDiscountRemoteDataSource extends _i1.Mock
+    implements _i6.IDiscountRemoteDataSource {
   @override
-  _i3.Future<void> saveFavoriteProduct(_i6.ProductsDTO? product) =>
-      (super.noSuchMethod(
+  _i3.Future<double> getDiscount({String? productId}) => (super.noSuchMethod(
         Invocation.method(
-          #saveFavoriteProduct,
-          [product],
+          #getDiscount,
+          [],
+          {#productId: productId},
         ),
-        returnValue: _i3.Future<void>.value(),
-        returnValueForMissingStub: _i3.Future<void>.value(),
-      ) as _i3.Future<void>);
+        returnValue: _i3.Future<double>.value(0.0),
+        returnValueForMissingStub: _i3.Future<double>.value(0.0),
+      ) as _i3.Future<double>);
 }
 
 /// A class which mocks [INetworkStatusService].

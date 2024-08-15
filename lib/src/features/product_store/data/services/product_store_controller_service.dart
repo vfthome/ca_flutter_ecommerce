@@ -1,7 +1,7 @@
-import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_store_state_entity.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/repositories/i_product_repository.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/services/i_product_store_controller_service.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/usecases/update_products_list_uc.dart';
+import '../../interactor/entities/product_store_state_entity.dart';
+import '../../interactor/repositories/i_product_repository.dart';
+import '../../interactor/services/i_product_store_controller_service.dart';
+import '../../interactor/usecases/update_products_list_uc.dart';
 
 class ProductStoreControllerService implements IProductStoreControllerService {
   final ProductStoreStateEntity _state;

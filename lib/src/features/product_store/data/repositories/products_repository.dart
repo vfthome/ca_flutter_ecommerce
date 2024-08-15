@@ -1,20 +1,22 @@
-import 'package:ca_flutter_test/src/core/interactor/error/server_exception.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/dtos/products_dto.dart';
-import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_network_status_service.dart';
-
+import '../../../../core/interactor/error/server_exception.dart';
+import '../../../../shared/modules/internet/interactor/services/i_network_status_service.dart';
+import '../../interactor/datasources/i_discount_remote_ds.dart';
 import '../../interactor/datasources/i_favorite_products_ds.dart';
 import '../../interactor/datasources/i_products_remote_ds.dart';
+import '../../interactor/dtos/products_dto.dart';
 import '../../interactor/entities/product_entity.dart';
 import '../../interactor/repositories/i_product_repository.dart';
 
 class ProductsRepository implements IProductsRepository {
   final IProductsRemoteDataSource remoteProductsDataSource;
   final IFavoriteProductsDataSource favoriteProductsDataSource;
+  final IDiscountRemoteDataSource discountRemoteDataSource;
   final INetworkStatusService networkStatusService;
 
   ProductsRepository({
     required this.remoteProductsDataSource,
     required this.favoriteProductsDataSource,
+    required this.discountRemoteDataSource,
     required this.networkStatusService,
   });
 
@@ -36,6 +38,11 @@ class ProductsRepository implements IProductsRepository {
 
   @override
   Future<void> saveFavoriteProducts({required ProductsDTO products}) async {
-    await favoriteProductsDataSource.saveFavoriteProduct(products);
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<double> getDiscount({String productId = ''}) async {
+    return await discountRemoteDataSource.getDiscount();
   }
 }

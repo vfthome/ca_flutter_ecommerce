@@ -1,15 +1,16 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/services/i_product_store_controller_service.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/categories_bar.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/countdown_timer.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/featured_product.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/filter_bar.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/loading_spinner.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/product.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/top_menu_bar.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/ui/responsive_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
+import '../../interactor/services/i_product_store_controller_service.dart';
+import '../widgets/categories_bar.dart';
+import '../widgets/countdown_timer.dart';
+import '../widgets/featured_product.dart';
+import '../widgets/filter_bar.dart';
+import '../widgets/loading_spinner.dart';
+import '../widgets/product.dart';
+import '../widgets/top_menu_bar.dart';
 
 class ProductStorePage extends StatefulWidget {
   const ProductStorePage({super.key});

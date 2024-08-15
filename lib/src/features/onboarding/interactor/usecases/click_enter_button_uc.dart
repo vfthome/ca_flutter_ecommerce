@@ -1,8 +1,9 @@
 import 'dart:async';
 
-import 'package:ca_flutter_test/src/core/interactor/use_cases/i_use_cases.dart';
-import 'package:ca_flutter_test/src/core/routes/routes.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../core/interactor/use_cases/i_use_cases.dart';
+import '../../../../core/routes/routes.dart';
 
 class ClickEnterButtonUseCase implements IUseCases {
   @override

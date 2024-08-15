@@ -1,6 +1,7 @@
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
 
 class LoadingSpinner extends StatelessWidget {
   const LoadingSpinner({

@@ -1,8 +1,9 @@
 import 'dart:ui';
 
-import 'package:ca_flutter_test/src/shared/modules/haptic_feedback/interactor/services/i_haptics_service.dart';
 import 'package:flutter/services.dart';
 import 'package:vibration/vibration.dart';
+
+import '../../interactor/services/i_haptics_service.dart';
 
 class VibrateHapticsService implements IHapticService {
   int convertIntensity(amplitude) {

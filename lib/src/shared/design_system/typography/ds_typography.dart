@@ -1,6 +1,7 @@
-import 'package:ca_flutter_test/src/shared/design_system/colors/ds_colors.dart';
-import 'package:ca_flutter_test/src/shared/design_system/config/fonts.gen.dart';
 import 'package:flutter/material.dart';
+
+import '../colors/ds_colors.dart';
+import '../config/fonts.gen.dart';
 
 class DesignSystemTypography {
   /// Font style: Onboarding Title

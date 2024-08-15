@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../core/core_module.dart';
+import '../../core/core_module.dart';
 
 //* -------------------------------------------------------------------------------
 //* ------------------------------ TEMPLATE MODULE --------------------------------

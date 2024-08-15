@@ -1,5 +1,6 @@
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
 import 'package:flutter/material.dart';
+
+import '../../../shared/design_system/design_system.dart';
 
 class Error404Page extends StatelessWidget {
   const Error404Page({super.key});

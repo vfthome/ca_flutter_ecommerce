@@ -1,4 +1,4 @@
-import 'package:ca_flutter_test/src/shared/design_system/config/assets.gen.dart';
+import '../config/assets.gen.dart';
 
 class DesignSystemAssets {
   final image = Assets.images;

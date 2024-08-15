@@ -1,4 +1,4 @@
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/interactor/enums/platform_types_enum.dart';
+import '../enums/platform_types_enum.dart';
 
 class PlatformInfo {
   final double availableViewportWidth;

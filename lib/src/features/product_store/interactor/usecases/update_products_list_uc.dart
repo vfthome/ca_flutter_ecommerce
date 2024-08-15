@@ -1,9 +1,10 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/core/interactor/use_cases/i_use_cases.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/repositories/i_product_repository.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/services/i_product_store_controller_service.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/usecases/get_products_uc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../core/interactor/use_cases/i_use_cases.dart';
+import '../repositories/i_product_repository.dart';
+import '../services/i_product_store_controller_service.dart';
+import 'get_products_uc.dart';
 
 class UpdateProductsListUseCase implements IUseCases {
   final IProductsRepository _repository;

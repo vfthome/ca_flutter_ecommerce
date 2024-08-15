@@ -1,8 +1,9 @@
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_platform_info.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/data/services/platform_info_service.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/interactor/enums/platform_types_enum.dart';
 import 'package:flutter/material.dart';
+
+import '../constants/k_figma_auto_scale.dart';
+import '../constants/k_platform_info.dart';
+import '../data/services/platform_info_service.dart';
+import '../interactor/enums/platform_types_enum.dart';
 
 /// This is the [ResponsiveLayout] widget.
 /// Our root widget for all pages.

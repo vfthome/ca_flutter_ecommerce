@@ -1,13 +1,14 @@
 import 'dart:async';
 
-import 'package:ca_flutter_test/src/core/routes/routes.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/ui/responsive_layout.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_svg/display_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../shared/design_system/design_system.dart';
+import '../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
+import '../../../shared/widgets/display_media/display_svg/display_svg.dart';
+import '../../routes/routes.dart';
 
 class SplashArt extends StatefulWidget {
   const SplashArt({super.key});

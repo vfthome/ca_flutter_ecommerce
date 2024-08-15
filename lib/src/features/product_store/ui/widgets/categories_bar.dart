@@ -1,8 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/widgets/buttons/transparent_button.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../../shared/widgets/buttons/transparent_button.dart';
 
 /// Should be also fetched from API, but for now it's hardcoded
 /// current API categories available are: electronics, jewelery, men's clothing, women's clothing

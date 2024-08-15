@@ -1,7 +1,8 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/core/interactor/use_cases/i_use_cases.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../core/interactor/use_cases/i_use_cases.dart';
+import '../services/i_onboarding_controller_service.dart';
 
 class UpdateScrollStateUseCase implements IUseCases<void, bool> {
   @override

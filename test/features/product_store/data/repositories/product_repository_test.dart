@@ -1,5 +1,6 @@
 import 'package:ca_flutter_test/src/core/interactor/error/server_exception.dart';
 import 'package:ca_flutter_test/src/features/product_store/data/repositories/products_repository.dart';
+import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_discount_remote_ds.dart';
 import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_favorite_products_ds.dart';
 import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_products_remote_ds.dart';
 import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_entity.dart';
@@ -13,12 +14,14 @@ import 'product_repository_test.mocks.dart';
 @GenerateNiceMocks([
   MockSpec<IProductsRemoteDataSource>(),
   MockSpec<IFavoriteProductsDataSource>(),
+  MockSpec<IDiscountRemoteDataSource>(),
   MockSpec<INetworkStatusService>(),
 ])
 void main() {
   final mockNetworkStatusService = MockINetworkStatusService();
   final mockProductsRemoteDataSource = MockIProductsRemoteDataSource();
   final mockFavoriteProductsDataSource = MockIFavoriteProductsDataSource();
+  final mockDiscountRemoteDataSource = MockIDiscountRemoteDataSource();
   late ProductsRepository productRepository;
 
   const List<ProductEntity> products = [
@@ -44,6 +47,7 @@ void main() {
     productRepository = ProductsRepository(
       remoteProductsDataSource: mockProductsRemoteDataSource,
       favoriteProductsDataSource: mockFavoriteProductsDataSource,
+      discountRemoteDataSource: mockDiscountRemoteDataSource,
       networkStatusService: mockNetworkStatusService,
     );
   });

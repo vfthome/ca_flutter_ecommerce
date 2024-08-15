@@ -1,8 +1,9 @@
-import 'package:ca_flutter_test/src/core/config/firebase_options.dart';
-import 'package:ca_flutter_test/src/core/interactor/services/i_core_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../config/firebase_options.dart';
+import '../../interactor/services/i_core_service.dart';
 
 class CoreService implements ICoreService {
   @override

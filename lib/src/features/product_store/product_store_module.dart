@@ -1,15 +1,18 @@
-import 'package:ca_flutter_test/src/core/core_module.dart';
-import 'package:ca_flutter_test/src/features/product_store/data/datasources/favorite_products_ds.dart';
-import 'package:ca_flutter_test/src/features/product_store/data/datasources/products_remote_ds.dart';
-import 'package:ca_flutter_test/src/features/product_store/data/repositories/products_repository.dart';
-import 'package:ca_flutter_test/src/features/product_store/data/services/product_store_controller_service.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_favorite_products_ds.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/datasources/i_products_remote_ds.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_store_state_entity.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/repositories/i_product_repository.dart';
-import 'package:ca_flutter_test/src/features/product_store/interactor/services/i_product_store_controller_service.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/pages/product_store_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../core/core_module.dart';
+import 'data/datasources/discount_remote_ds.dart';
+import 'data/datasources/favorite_products_ds.dart';
+import 'data/datasources/products_remote_ds.dart';
+import 'data/repositories/products_repository.dart';
+import 'data/services/product_store_controller_service.dart';
+import 'interactor/datasources/i_discount_remote_ds.dart';
+import 'interactor/datasources/i_favorite_products_ds.dart';
+import 'interactor/datasources/i_products_remote_ds.dart';
+import 'interactor/entities/product_store_state_entity.dart';
+import 'interactor/repositories/i_product_repository.dart';
+import 'interactor/services/i_product_store_controller_service.dart';
+import 'ui/pages/product_store_page.dart';
 
 //* -------------------------------------------------------------------------------
 //* ------------------------- PRODUCT STORE MODULE --------------------------------
@@ -25,9 +28,15 @@ class ProductStoreModule extends Module {
   //* --- MODULE ONLY BINDS ---
   @override
   void binds(Injector i) {
+    // Data Sources
     i.add<IProductsRemoteDataSource>(ProductsRemoteDataSource.new);
     i.add<IFavoriteProductsDataSource>(FavoriteProductsDataSource.new);
+    i.add<IDiscountRemoteDataSource>(DiscountRemoteDataSource.new);
+
+    // Repositories
     i.add<IProductsRepository>(ProductsRepository.new);
+
+    // Controller
     i.addSingleton<IProductStoreControllerService>(
       () => ProductStoreControllerService(
         state: ProductStoreStateEntity.initial(),

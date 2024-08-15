@@ -1,8 +1,9 @@
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/widgets/buttons/transparent_button.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_svg/display_svg.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../../shared/widgets/buttons/transparent_button.dart';
+import '../../../../shared/widgets/display_media/display_svg/display_svg.dart';
 
 class FavoriteItemButton extends StatelessWidget {
   const FavoriteItemButton({

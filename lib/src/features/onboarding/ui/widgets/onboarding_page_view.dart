@@ -1,14 +1,15 @@
 import 'dart:async';
 
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_body.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_title.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_device_size.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_image/display_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_device_size.dart';
+import '../../../../shared/widgets/display_media/display_image/display_image.dart';
+import '../../interactor/services/i_onboarding_controller_service.dart';
+import 'onboarding_body.dart';
+import 'onboarding_title.dart';
 
 class OnboardingPageView extends StatefulWidget {
   const OnboardingPageView({

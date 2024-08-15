@@ -1,9 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_image/display_image.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_svg/display_svg.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../../shared/widgets/display_media/display_image/display_image.dart';
+import '../../../../shared/widgets/display_media/display_svg/display_svg.dart';
 
 class TopMenuBar extends StatelessWidget {
   const TopMenuBar({

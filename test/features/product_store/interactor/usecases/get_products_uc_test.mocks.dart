@@ -67,4 +67,16 @@ class MockIProductsRepository extends _i1.Mock
         returnValue: _i3.Future<void>.value(),
         returnValueForMissingStub: _i3.Future<void>.value(),
       ) as _i3.Future<void>);
+
+  @override
+  _i3.Future<double> getDiscount({String? productId = r''}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #getDiscount,
+          [],
+          {#productId: productId},
+        ),
+        returnValue: _i3.Future<double>.value(0.0),
+        returnValueForMissingStub: _i3.Future<double>.value(0.0),
+      ) as _i3.Future<double>);
 }

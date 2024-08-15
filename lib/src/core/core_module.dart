@@ -1,10 +1,11 @@
-import 'package:ca_flutter_test/src/core/routes/routes.dart';
-import 'package:ca_flutter_test/src/core/ui/pages/splash_art_page.dart';
-import 'package:ca_flutter_test/src/features/onboarding/onboarding_module.dart';
-import 'package:ca_flutter_test/src/features/product_store/product_store_module.dart';
-import 'package:ca_flutter_test/src/shared/modules/haptic_feedback/haptic_feedback_module.dart';
-import 'package:ca_flutter_test/src/shared/modules/internet/internet_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../features/onboarding/onboarding_module.dart';
+import '../features/product_store/product_store_module.dart';
+import '../shared/modules/haptic_feedback/haptic_feedback_module.dart';
+import '../shared/modules/internet/internet_module.dart';
+import 'routes/routes.dart';
+import 'ui/pages/splash_art_page.dart';
 
 class CoreModule extends Module {
   //* --- MODULE IMPORTS ---
