@@ -1,6 +1,7 @@
-import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_http_client_service.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
+
+import '../../interactor/services/i_http_client_service.dart';
 
 class HttpClientService implements IHttpClientService {
   final client = http.Client();

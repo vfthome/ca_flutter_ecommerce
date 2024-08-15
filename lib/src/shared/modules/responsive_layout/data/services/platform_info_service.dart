@@ -1,7 +1,7 @@
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/config/figma_config.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/interactor/entities/platform_info.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/interactor/enums/platform_types_enum.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/interactor/services/i_platform_info_service.dart';
+import '../../config/figma_config.dart';
+import '../../interactor/entities/platform_info.dart';
+import '../../interactor/enums/platform_types_enum.dart';
+import '../../interactor/services/i_platform_info_service.dart';
 
 class PlatformInfoService implements IPlatformTypeService {
   @override

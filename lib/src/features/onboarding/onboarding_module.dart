@@ -1,13 +1,14 @@
-import 'package:ca_flutter_test/src/core/core_module.dart';
-import 'package:ca_flutter_test/src/features/onboarding/data/datasources/onboarding_datasource.dart';
-import 'package:ca_flutter_test/src/features/onboarding/data/repositories/onboarding_repository.dart';
-import 'package:ca_flutter_test/src/features/onboarding/data/services/onboarding_controller_service.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/datasources/i_onboarding_datasource.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/entities/onboarding_state_entity.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/repositories/i_onboarding_repository.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/pages/onboarding_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../core/core_module.dart';
+import 'data/datasources/onboarding_datasource.dart';
+import 'data/repositories/onboarding_repository.dart';
+import 'data/services/onboarding_controller_service.dart';
+import 'interactor/datasources/i_onboarding_datasource.dart';
+import 'interactor/entities/onboarding_state_entity.dart';
+import 'interactor/repositories/i_onboarding_repository.dart';
+import 'interactor/services/i_onboarding_controller_service.dart';
+import 'ui/pages/onboarding_page.dart';
 
 //* -------------------------------------------------------------------------------
 //* ----------------------------- ONBOARDING MODULE -------------------------------
@@ -25,12 +26,10 @@ class OnboardingModule extends Module {
     i.add<IOnboardingDatasource>(OnboardingDatasource.new);
     i.add<IOnboardingRepository>(OnboardingRepository.new);
     i.addSingleton<IOnboardingControllerService>(
-      () {
-        return OnboardingControllerService(
-          featureRepository: i.get<IOnboardingRepository>(),
-          initialState: OnboardingStateEntity.initial(),
-        );
-      },
+      () => OnboardingControllerService(
+        featureRepository: i.get<IOnboardingRepository>(),
+        initialState: OnboardingStateEntity.initial(),
+      ),
     );
   }
 
@@ -39,25 +38,14 @@ class OnboardingModule extends Module {
   List<Module> get imports => [
         // --- CORE MODULE ---
         CoreModule(),
-
-        // --- IMPORTED MODULES ---
-
-        // ...
       ];
 
   //* --- EXPORTED CLASS INSTANCES (BINDS) ---
   @override
   void routes(RouteManager r) {
     // --- MAIN ROUTE ---
-    r.child(
-      '/',
-      child: (context) {
-        return const OnboardingPage();
-      },
-    );
-
-    // --- OTHER ROUTES ---
-
-    // ...
+    r.child('/', child: (context) {
+      return const OnboardingPage();
+    });
   }
 }

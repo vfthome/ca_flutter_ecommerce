@@ -1,8 +1,8 @@
-import 'package:ca_flutter_test/src/shared/design_system/assets/ds_assets.dart';
-import 'package:ca_flutter_test/src/shared/design_system/colors/ds_colors.dart';
-import 'package:ca_flutter_test/src/shared/design_system/fonts/ds_fonts.dart';
-import 'package:ca_flutter_test/src/shared/design_system/spacing/ds_spacing.dart';
-import 'package:ca_flutter_test/src/shared/design_system/typography/ds_typography.dart';
+import 'assets/ds_assets.dart';
+import 'colors/ds_colors.dart';
+import 'fonts/ds_fonts.dart';
+import 'spacing/ds_spacing.dart';
+import 'typography/ds_typography.dart';
 
 final class DesignSystem {
   final assets = DesignSystemAssets();

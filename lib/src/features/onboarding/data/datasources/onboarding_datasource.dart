@@ -1,6 +1,6 @@
-import 'package:ca_flutter_test/src/features/onboarding/interactor/datasources/i_onboarding_datasource.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/dtos/onboarding_page_contents_dto.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
+import '../../../../shared/design_system/design_system.dart';
+import '../../interactor/datasources/i_onboarding_datasource.dart';
+import '../../interactor/entities/onboarding_page_contents_dto.dart';
 
 class OnboardingDatasource implements IOnboardingDatasource {
   @override

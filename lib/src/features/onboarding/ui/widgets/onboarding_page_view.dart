@@ -1,12 +1,15 @@
+import 'dart:async';
+
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_body.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_title.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_device_size.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_image/display_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/constants/k_device_size.dart';
+import '../../../../shared/widgets/display_media/display_image/display_image.dart';
+import '../../interactor/services/i_onboarding_controller_service.dart';
+import 'onboarding_body.dart';
+import 'onboarding_title.dart';
 
 class OnboardingPageView extends StatefulWidget {
   const OnboardingPageView({
@@ -47,46 +50,66 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
           animationInProgress = true;
         }
 
-        return PageView.builder(
-          controller: widget._controller,
-          itemCount: 3,
-          itemBuilder: (context, currentPageIndex) {
-            // Get current state
-            final currentPageContents = onboardingController
-                .state.onboardingContentAtom.state[currentPageIndex];
+        return NotificationListener(
+          onNotification: (scrollNotification) {
+            if (mounted) {
+              if (scrollNotification is ScrollStartNotification) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  onboardingController.updateScrollState(params: false);
+                });
+              } else if (scrollNotification is ScrollEndNotification) {
+                WidgetsBinding.instance.addPostFrameCallback((_) {
+                  Timer(
+                    const Duration(milliseconds: 700),
+                    () => onboardingController.updateScrollState(params: true),
+                  );
+                });
+              }
+            }
 
-            return Stack(
-              children: [
-                // Image Frame
-                Align(
-                  alignment: const Alignment(0, -0.28),
-                  child: DisplayImage(
-                    imagePath: currentPageContents.imagePath,
-                  ),
-                ),
+            return true;
+          },
+          child: PageView.builder(
+            controller: widget._controller,
+            itemCount: 3,
+            itemBuilder: (context, currentPageIndex) {
+              // Get current state
+              final currentPageContents = onboardingController
+                  .state.onboardingContentAtom.state[currentPageIndex];
 
-                // Onboarding body
-                Align(
-                  alignment: const Alignment(0, 0.4),
-                  child: OnboardingBody(
-                    body: currentPageContents.body,
-                    style: ds.typography.onboardingBody,
-                  ),
-                ),
-
-                // Onboarding Title
-                Align(
-                  alignment: const Alignment(0, 0.20),
-                  child: OnboardingTitle(
-                    title: currentPageContents.title,
-                    style: ds.typography.onboardingTitle.copyWith(
-                      color: ds.colors.light,
+              return Stack(
+                children: [
+                  // Image Frame
+                  Align(
+                    alignment: const Alignment(0, -0.28),
+                    child: DisplayImage(
+                      imagePath: currentPageContents.imagePath,
                     ),
                   ),
-                ),
-              ],
-            );
-          },
+
+                  // Onboarding body
+                  Align(
+                    alignment: const Alignment(0, 0.4),
+                    child: OnboardingBody(
+                      body: currentPageContents.body,
+                      style: ds.typography.onboardingBody,
+                    ),
+                  ),
+
+                  // Onboarding Title
+                  Align(
+                    alignment: const Alignment(0, 0.20),
+                    child: OnboardingTitle(
+                      title: currentPageContents.title,
+                      style: ds.typography.onboardingTitle.copyWith(
+                        color: ds.colors.light,
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
+          ),
         );
       },
     );

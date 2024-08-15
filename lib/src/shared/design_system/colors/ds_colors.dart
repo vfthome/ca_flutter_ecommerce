@@ -6,6 +6,7 @@ final class DesingSystemColors {
   Color get light => const Color(0xFFE3F7FF);
   Color get lightContainer => const Color(0xFF82C6DF).withOpacity(0.3);
   Color get dark => const Color(0xFF133542);
+  Color get black => const Color(0xFF000000);
   Color get filterMenuButtons => const Color(0xFF0D658A).withOpacity(0.8);
   Color get priceRed => const Color(0xFFFF5959).withOpacity(0.7);
   Color get heart => const Color(0xFFFF5959).withOpacity(0.6);
@@ -21,4 +22,5 @@ final class DesingSystemColors {
   Color get darkFullscreenOverlay => const Color(0xFF060707).withOpacity(0.35);
   Color get searchButtonIddle => const Color(0xFF0D658A);
   Color get searchButtonPressed => const Color(0xFF0A3344);
+  Color get countdownColor => const Color(0xFF008EBA);
 }

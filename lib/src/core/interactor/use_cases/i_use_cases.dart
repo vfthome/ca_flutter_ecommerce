@@ -1,5 +1,3 @@
-abstract class IUseCases<T> {
-  Future<void> handleEvent({
-    required T event,
-  });
+abstract class IUseCases<T, Params> {
+  Future<T> call({required Params params});
 }

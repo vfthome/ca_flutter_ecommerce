@@ -1,4 +1,4 @@
-import 'package:ca_flutter_test/src/features/onboarding/interactor/dtos/onboarding_page_contents_dto.dart';
+import '../entities/onboarding_page_contents_dto.dart';
 
 abstract class IOnboardingDatasource {
   List<OnboardingPageContentsDTO> getDefaultContents();

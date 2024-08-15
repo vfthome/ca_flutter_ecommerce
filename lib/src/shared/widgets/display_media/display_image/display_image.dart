@@ -18,15 +18,15 @@ class DisplayImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (
-        context,
-        constraints,
-      ) {
-        return SizedBox(
-          height: height,
-          width: width,
-          child: Image(
+    return SizedBox(
+      height: height,
+      width: width,
+      child: LayoutBuilder(
+        builder: (
+          context,
+          constraints,
+        ) {
+          return Image(
             fit: fit,
             image: ResizeImage(
               Image.asset(
@@ -34,9 +34,9 @@ class DisplayImage extends StatelessWidget {
               ).image,
               width: (constraints.maxWidth * (resolution ?? 1)).round(),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

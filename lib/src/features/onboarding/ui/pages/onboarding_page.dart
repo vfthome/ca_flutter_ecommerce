@@ -1,16 +1,17 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/onboarding/interactor/services/i_onboarding_controller_service.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/company_logo.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/conta_azul_leafs.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/next_button.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/onboarding_page_view.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/previous_button.dart';
-import 'package:ca_flutter_test/src/features/onboarding/ui/widgets/skip_button.dart';
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/ui/responsive_layout.dart';
-import 'package:ca_flutter_test/src/shared/widgets/progress_indicator/page_view_indicator/page_view_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
+import '../../../../shared/widgets/progress_indicator/page_view_indicator/page_view_indicator.dart';
+import '../../interactor/services/i_onboarding_controller_service.dart';
+import '../widgets/company_logo.dart';
+import '../widgets/conta_azul_leafs.dart';
+import '../widgets/next_button.dart';
+import '../widgets/onboarding_page_view.dart';
+import '../widgets/previous_button.dart';
+import '../widgets/skip_button.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -20,7 +21,7 @@ class OnboardingPage extends StatefulWidget {
 }
 
 class _OnboardingPageState extends State<OnboardingPage>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, HookStateMixin {
   //* --- PARAMETERS ---
   late PageController _controller;
   final onboardingService = Modular.get<IOnboardingControllerService>();
@@ -38,11 +39,11 @@ class _OnboardingPageState extends State<OnboardingPage>
     // SCROLL EVENT SUBSCRIPTION
     _controller.addListener(
       () {
-        debugPrint('Controller value: ${_controller.page}');
-        onboardingService.scrollEvent(
-          currentPage: (_controller.page ?? 0).round(),
-        );
-        onboardingService.buttonVisibility();
+        if (mounted) {
+          onboardingService.scrollEvent(
+            currentPage: (_controller.page ?? 0).round(),
+          );
+        }
       },
     );
   }
