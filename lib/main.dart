@@ -22,7 +22,6 @@
 //? -----------------------------------------------------------------------------------------------------
 //? Made by: Vitor - Jul 23, 2024.
 //* Company: VFTHOME Solutions In Technology.
-//* For more informations, consult documentation in app > '0 - Read-me' folder.
 
 import 'package:ca_flutter_test/src/core/config/material_app_config.dart';
 import 'package:ca_flutter_test/src/core/core_module.dart';
