@@ -21,7 +21,7 @@
 //? -----------------------------------------------------------------------------------------------------
 //? -----------------------------------------------------------------------------------------------------
 //? Made by: Vitor - Jul 23, 2024.
-//* Company: VFTHOME Solutions In Technology.
+//* Company: VFTHOME Solutions In Technology LTDA.
 
 import 'package:ca_flutter_test/src/core/config/material_app_config.dart';
 import 'package:ca_flutter_test/src/core/core_module.dart';
