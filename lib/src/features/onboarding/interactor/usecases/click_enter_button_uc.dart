@@ -8,7 +8,7 @@ import '../../../../core/routes/routes.dart';
 class ClickEnterButtonUseCase implements IUseCases {
   @override
   Future<void> call({params}) async {
-    // Navigate to next page
-    Modular.to.navigate(const Routes().productStore);
+    // Navigate to authentication page
+    Modular.to.navigate('${const Routes().auth}/');
   }
 }

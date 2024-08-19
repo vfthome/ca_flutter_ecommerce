@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import 'get_products_uc_test.mocks.dart';
+import 'get_favorite_products_uc_test.mocks.dart';
 
 @GenerateNiceMocks([MockSpec<IProductsRepository>()])
 void main() {
@@ -38,7 +38,6 @@ void main() {
     ),
   ];
 
-  //* TEST USE CASE
   test(
     'should get a list of favorite products from the repository',
     () async {

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../design_system/design_system.dart';
+import '../../modules/haptic_feedback/interactor/services/i_haptics_service.dart';
 
 class TransparentButton extends StatelessWidget {
   const TransparentButton({
@@ -23,6 +25,7 @@ class TransparentButton extends StatelessWidget {
         ),
         onTap: () {
           onTap != null ? onTap!() : null;
+          Modular.get<IHapticService>().mediumImpact();
         },
       ),
     );

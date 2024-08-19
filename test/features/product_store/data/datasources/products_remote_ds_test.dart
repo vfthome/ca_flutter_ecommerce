@@ -5,18 +5,20 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test(
-    'should return a ${List<ProductEntity>}',
-    () async {
-      // Arrange
-      final dataSource = ProductsRemoteDataSource();
-      Modular.bindModule(CoreModule());
+  group('datasource', () {
+    test(
+      'should return a ${List<ProductEntity>}',
+      () async {
+        // Arrange
+        final dataSource = ProductsRemoteDataSource();
+        Modular.bindModule(CoreModule());
 
-      // Act
-      final result = await dataSource.getProducts();
+        // Act
+        final result = await dataSource.getProducts();
 
-      // Assert
-      expect(result, isA<List<ProductEntity>>());
-    },
-  );
+        // Assert
+        expect(result, isA<List<ProductEntity>>());
+      },
+    );
+  });
 }

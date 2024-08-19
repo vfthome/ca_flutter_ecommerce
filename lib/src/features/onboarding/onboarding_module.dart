@@ -40,7 +40,7 @@ class OnboardingModule extends Module {
         CoreModule(),
       ];
 
-  //* --- EXPORTED CLASS INSTANCES (BINDS) ---
+  //* --- ROUTES ---
   @override
   void routes(RouteManager r) {
     // --- MAIN ROUTE ---

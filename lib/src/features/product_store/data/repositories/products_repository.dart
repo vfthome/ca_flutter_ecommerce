@@ -1,5 +1,3 @@
-import '../../../../core/interactor/error/server_exception.dart';
-import '../../../../shared/modules/internet/interactor/services/i_network_status_service.dart';
 import '../../interactor/datasources/i_discount_remote_ds.dart';
 import '../../interactor/datasources/i_favorite_products_ds.dart';
 import '../../interactor/datasources/i_products_remote_ds.dart';
@@ -11,28 +9,28 @@ class ProductsRepository implements IProductsRepository {
   final IProductsRemoteDataSource remoteProductsDataSource;
   final IFavoriteProductsDataSource favoriteProductsDataSource;
   final IDiscountRemoteDataSource discountRemoteDataSource;
-  final INetworkStatusService networkStatusService;
 
   ProductsRepository({
     required this.remoteProductsDataSource,
     required this.favoriteProductsDataSource,
     required this.discountRemoteDataSource,
-    required this.networkStatusService,
   });
 
   @override
   Future<List<ProductEntity>> getFavoriteProducts() async {
-    return await favoriteProductsDataSource.getFavoriteProducts();
+    try {
+      return await favoriteProductsDataSource.getFavoriteProducts();
+    } catch (e) {
+      return [];
+    }
   }
 
   @override
   Future<List<ProductEntity>> getProducts() async {
-    final isConnected = await networkStatusService.getInternetStatus();
-
-    if (isConnected) {
+    try {
       return await remoteProductsDataSource.getProducts();
-    } else {
-      throw ServerException();
+    } catch (e) {
+      return [];
     }
   }
 
