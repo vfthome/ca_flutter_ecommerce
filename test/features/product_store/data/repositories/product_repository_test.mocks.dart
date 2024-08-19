@@ -13,7 +13,7 @@ import 'package:ca_flutter_test/src/features/product_store/interactor/datasource
     as _i2;
 import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_entity.dart'
     as _i4;
-import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_network_status_service.dart'
+import 'package:ca_flutter_test/src/shared/modules/internet/interactor/services/i_internet_status_service.dart'
     as _i7;
 import 'package:mockito/mockito.dart' as _i1;
 
@@ -84,11 +84,11 @@ class MockIDiscountRemoteDataSource extends _i1.Mock
       ) as _i3.Future<double>);
 }
 
-/// A class which mocks [INetworkStatusService].
+/// A class which mocks [IInternetStatusService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockINetworkStatusService extends _i1.Mock
-    implements _i7.INetworkStatusService {
+class MockIInternetStatusService extends _i1.Mock
+    implements _i7.IInternetStatusService {
   @override
   _i3.Future<bool> getInternetStatus() => (super.noSuchMethod(
         Invocation.method(

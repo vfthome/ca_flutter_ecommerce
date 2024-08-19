@@ -21,6 +21,6 @@ final class DesingSystemColors {
   Color get productDivider => const Color(0xFFA9D9EA);
   Color get darkFullscreenOverlay => const Color(0xFF060707).withOpacity(0.35);
   Color get searchButtonIddle => const Color(0xFF0D658A);
-  Color get searchButtonPressed => const Color(0xFF0A3344);
+  Color get darkBlue => const Color(0xFF0D2749);
   Color get countdownColor => const Color(0xFF008EBA);
 }

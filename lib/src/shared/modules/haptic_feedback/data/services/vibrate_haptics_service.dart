@@ -13,16 +13,19 @@ class VibrateHapticsService implements IHapticService {
   @override
   void heavyImpact() {
     HapticFeedback.heavyImpact();
+    SystemSound.play(SystemSoundType.click);
   }
 
   @override
   void lightImpact() {
     HapticFeedback.mediumImpact();
+    SystemSound.play(SystemSoundType.click);
   }
 
   @override
   void mediumImpact() {
     HapticFeedback.lightImpact();
+    SystemSound.play(SystemSoundType.click);
   }
 
   @override

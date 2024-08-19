@@ -33,7 +33,7 @@ class SoldOutCounter extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Container(
-                  color: ds.colors.primary.withOpacity(0.5),
+                  color: ds.colors.primary.withOpacity(0.1),
                   height: 20 * figmaHeight,
                   width: 120 * (ammountSold / 150) * figmaWidth,
                 ),

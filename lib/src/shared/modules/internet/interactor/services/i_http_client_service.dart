@@ -1,6 +1,16 @@
 abstract class IHttpClientService {
+  //* Get
   Future<dynamic> get({required String url});
-  Future<dynamic> post({required String url, required dynamic body});
-  Future<dynamic> put({required String url, required dynamic body});
+  //* Post
+  Future<dynamic> post({
+    required String url,
+    required Map<String, dynamic> body,
+  });
+  //* Put
+  Future<dynamic> put({
+    required String url,
+    required Map<String, dynamic> body,
+  });
+  //* Delete
   Future<dynamic> delete({required String url});
 }

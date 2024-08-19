@@ -79,18 +79,18 @@ class _OnboardingPageState extends State<OnboardingPage>
             child: ContaAzulLeafs(),
           ),
 
+          //* Progress indicator bar
           Align(
             alignment: const Alignment(0, 0.55),
             child: Align(
               alignment: const Alignment(0, 0.55),
               child: AtomBuilder(builder: (context, get) {
                 //* Acess the current state with the exposed service method.
-                final onboardingControllerState =
+                final currentPageAtom =
                     Modular.get<IOnboardingControllerService>().state;
 
                 //* Listen for changes in the current page atom
-                final currentPage =
-                    get(onboardingControllerState.currentPageAtom);
+                final currentPage = get(currentPageAtom.currentPageAtom);
 
                 return PageViewProgressBar(currentPage: currentPage);
               }),
