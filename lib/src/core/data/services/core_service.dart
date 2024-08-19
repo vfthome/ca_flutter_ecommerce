@@ -1,8 +1,6 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../config/firebase_options.dart';
 import '../../interactor/services/i_core_service.dart';
 
 class CoreService implements ICoreService {
@@ -13,10 +11,10 @@ class CoreService implements ICoreService {
     // Flutter Widget Bindings
     WidgetsFlutterBinding.ensureInitialized();
 
-    // FIREBASE - Initialization
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+    // // FIREBASE - Initialization
+    // await Firebase.initializeApp(
+    //   options: DefaultFirebaseOptions.currentPlatform,
+    // );
 
     // Flutter Modular
     setPrintResolver((text) => debugPrint('[FLUTTER MODULAR] $text'));

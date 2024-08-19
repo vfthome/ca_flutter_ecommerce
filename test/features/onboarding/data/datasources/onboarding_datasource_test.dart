@@ -3,7 +3,7 @@ import 'package:ca_flutter_test/src/features/onboarding/interactor/entities/onbo
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  // DATASOURCE TEST GROUP
+  //* DATASOURCE TEST GROUP
   group('getDefaultContents', () {
     test('should return 3 onboarding page contents', () {
       // arrange

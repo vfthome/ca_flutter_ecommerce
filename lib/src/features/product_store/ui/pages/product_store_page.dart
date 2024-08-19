@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
-import '../../interactor/services/i_product_store_controller_service.dart';
+import '../../interactor/services/i_product_store_service.dart';
 import '../widgets/categories_bar.dart';
 import '../widgets/countdown_timer.dart';
 import '../widgets/featured_product.dart';
@@ -19,11 +19,10 @@ class ProductStorePage extends StatefulWidget {
   State<ProductStorePage> createState() => _ProductStorePageState();
 }
 
-class _ProductStorePageState extends State<ProductStorePage>
-    with HookStateMixin {
+class _ProductStorePageState extends State<ProductStorePage> {
   late final ScrollController _scrollController;
   // Controller
-  final viewController = Modular.get<IProductStoreControllerService>();
+  final viewController = Modular.get<IProductStoreService>();
 
   @override
   void initState() {
@@ -36,13 +35,13 @@ class _ProductStorePageState extends State<ProductStorePage>
         if (_scrollController.position.maxScrollExtent ==
             _scrollController.offset) {
           debugPrint('Loading more items!');
-          viewController.updateProductsList();
+          viewController.getMoreProducts();
         }
       },
     );
 
     //* Initial update
-    viewController.updateProductsList();
+    viewController.getMoreProducts();
   }
 
   @override

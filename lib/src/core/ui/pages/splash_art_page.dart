@@ -30,7 +30,7 @@ class _SplashArtState extends State<SplashArt>
     Timer(
       const Duration(milliseconds: 3300),
       () {
-        Modular.to.navigate(const Routes().onboarding);
+        Modular.to.navigate('${const Routes().onboarding}/');
       },
     );
   }

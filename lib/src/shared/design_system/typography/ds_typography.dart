@@ -4,7 +4,7 @@ import '../colors/ds_colors.dart';
 import '../config/fonts.gen.dart';
 
 class DesignSystemTypography {
-  /// Font style: Onboarding Title
+  /// Onboarding Title
   final TextStyle onboardingTitle = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 26,
@@ -13,7 +13,7 @@ class DesignSystemTypography {
     color: DesingSystemColors().primary,
   );
 
-  /// Font style: Onboarding Body
+  /// Onboarding Body
   final TextStyle onboardingBody = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 18,
@@ -23,7 +23,7 @@ class DesignSystemTypography {
     color: DesingSystemColors().light,
   );
 
-  /// Font style: Default Title
+  /// Default Title
   final TextStyle defaultTitle = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 24,
@@ -32,7 +32,7 @@ class DesignSystemTypography {
     color: DesingSystemColors().black,
   );
 
-  /// Font style: Countdown
+  /// Countdown
   final TextStyle countdown = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 20,
@@ -42,7 +42,7 @@ class DesignSystemTypography {
     color: DesingSystemColors().countdownColor,
   );
 
-  /// Font style: Product Name
+  /// Product Name / Sold Out Counter
   final TextStyle productName = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 20,
@@ -51,7 +51,7 @@ class DesignSystemTypography {
     color: DesingSystemColors().dark,
   );
 
-  /// Font style: Product Name
+  /// Product price
   final TextStyle productPrice = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 18,
@@ -62,7 +62,7 @@ class DesignSystemTypography {
     decoration: TextDecoration.lineThrough,
   );
 
-  /// Font style: Product Name
+  /// Product discount price
   final TextStyle productDiscountPrice = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 20,
@@ -72,7 +72,47 @@ class DesignSystemTypography {
     color: DesingSystemColors().dark,
   );
 
-  /// Font style: Name
+  /// Hint
+  final TextStyle hint = TextStyle(
+    fontFamily: FontFamily.houschkaPro,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 26 * 0.05,
+    height: 26 * 0.05,
+    color: Colors.black.withOpacity(0.5),
+  );
+
+  /// Body
+  final TextStyle body = TextStyle(
+    fontFamily: FontFamily.houschkaPro,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 26 * 0.05,
+    height: 26 * 0.05,
+    color: Colors.black.withOpacity(0.75),
+  );
+
+  /// Large button
+  final TextStyle largeButton = TextStyle(
+    fontFamily: FontFamily.houschkaPro,
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 26 * 0.05,
+    height: 26 * 0.05,
+    color: DesingSystemColors().white,
+  );
+
+  /// Small text
+  final TextStyle smallText = TextStyle(
+    fontFamily: FontFamily.houschkaPro,
+    fontSize: 14,
+    fontWeight: FontWeight.w300,
+    letterSpacing: 26 * 0.05,
+    height: 26 * 0.05,
+    color: DesingSystemColors().black,
+  );
+
+  /// Name here
   final TextStyle name = TextStyle(
     fontFamily: FontFamily.houschkaPro,
     fontSize: 18,

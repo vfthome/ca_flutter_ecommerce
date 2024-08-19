@@ -4,12 +4,13 @@ import '../repositories/i_product_repository.dart';
 
 class GetFavoriteProductsUseCase
     implements IUseCases<List<ProductEntity>, void> {
-  final IProductsRepository repository;
+  final IProductsRepository _repository;
 
-  GetFavoriteProductsUseCase({required this.repository});
+  GetFavoriteProductsUseCase({required IProductsRepository repository})
+      : _repository = repository;
 
   @override
   Future<List<ProductEntity>> call({params}) async {
-    return await repository.getFavoriteProducts();
+    return await _repository.getFavoriteProducts();
   }
 }

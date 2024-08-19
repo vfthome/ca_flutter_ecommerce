@@ -17,15 +17,13 @@ class ResponsiveLayout extends StatelessWidget {
     this.mobileLayout,
     this.tabletLayout,
     this.desktopLayout,
-    this.pageTitle = '',
-    this.returnButtonVisible = false,
+    this.backgroundColor,
   });
 
   final Widget? mobileLayout;
   final Widget? tabletLayout;
   final Widget? desktopLayout;
-  final String pageTitle;
-  final bool returnButtonVisible;
+  final Color? backgroundColor;
 
   void updateViewportScaling(BoxConstraints constraints) {
     // Update current global viewport dimensions constant
@@ -70,26 +68,16 @@ class ResponsiveLayout extends StatelessWidget {
         final layout = chooseLayout();
 
         return Scaffold(
-          backgroundColor: Colors.transparent,
+          resizeToAvoidBottomInset: false,
+          backgroundColor: backgroundColor ?? Colors.transparent,
           body: Stack(
             children: [
-              // Display child
+              GestureDetector(
+                onTap: () {
+                  FocusScope.of(context).unfocus();
+                },
+              ),
               layout,
-
-              // Return Button
-              returnButtonVisible
-                  ?
-                  // Diplayed
-                  const SizedBox()
-                  // Hiden
-                  : const SizedBox(),
-
-              // Page title
-              pageTitle.isNotEmpty
-                  // Diplayed
-                  ? const SizedBox()
-                  // Hiden
-                  : const SizedBox(),
             ],
           ),
         );

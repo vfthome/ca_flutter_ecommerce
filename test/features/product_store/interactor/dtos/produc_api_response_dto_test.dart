@@ -47,8 +47,10 @@ void main() {
         productsList.add(product.toMap());
       }
       expectedString.addAll({'products': productsList});
+
       // act
       final result = const ProductsDTO(products: products).toJson();
+
       // assert
       expect(result, expectedString);
     });

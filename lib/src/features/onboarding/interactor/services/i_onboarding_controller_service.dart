@@ -1,4 +1,4 @@
-import '../../../../core/interactor/services/i_service.dart';
+import '../../../../core/interactor/services/i_controller_service.dart';
 import '../entities/onboarding_state_entity.dart';
 
 abstract class IOnboardingControllerService
