@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../../shared/design_system/design_system.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_platform_info.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_safe_area.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_platform_info.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_safe_area.dart';
 import '../../../../shared/widgets/display_media/display_image/display_image.dart';
 
 class SignUpIdCard extends StatelessWidget {

@@ -5,7 +5,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:ca_flutter_test/src/features/product_store/interactor/dtos/products_dto.dart'
+import 'package:ca_flutter_test/src/features/product_store/data/adapters/products_adapter.dart'
     as _i5;
 import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_entity.dart'
     as _i4;
@@ -57,7 +57,8 @@ class MockIProductsRepository extends _i1.Mock
       ) as _i3.Future<List<_i4.ProductEntity>>);
 
   @override
-  _i3.Future<void> saveFavoriteProducts({required _i5.ProductsDTO? products}) =>
+  _i3.Future<void> saveFavoriteProducts(
+          {required _i5.ProductsAdapter? products}) =>
       (super.noSuchMethod(
         Invocation.method(
           #saveFavoriteProducts,

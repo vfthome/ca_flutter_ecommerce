@@ -1,12 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:ca_flutter_test/src/features/authentication/interactor/services/i_auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../shared/design_system/design_system.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_platform_info.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_platform_info.dart';
 import '../../../../shared/widgets/buttons/big_button.dart';
+import '../../interactor/services/i_auth_service.dart';
 import 'sign_up_email_field.dart';
 import 'sign_up_password_field.dart';
 

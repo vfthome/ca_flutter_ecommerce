@@ -1,11 +1,11 @@
-import 'package:ca_flutter_test/src/shared/design_system/design_system.dart';
-import 'package:ca_flutter_test/src/shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import 'package:ca_flutter_test/src/shared/widgets/buttons/transparent_button.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_image/display_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../core/routes/routes.dart';
+import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
+import '../../../../shared/widgets/buttons/transparent_button.dart';
+import '../../../../shared/widgets/display_media/display_image/display_image.dart';
 
 class UserProfile extends StatelessWidget {
   const UserProfile({

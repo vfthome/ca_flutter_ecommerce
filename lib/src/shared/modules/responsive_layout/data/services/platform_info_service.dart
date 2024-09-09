@@ -1,3 +1,5 @@
+import 'package:ca_flutter_test/src/shared/modules/responsive_layout/config/platform_type_config.dart';
+
 import '../../config/figma_config.dart';
 import '../../interactor/entities/platform_info.dart';
 import '../../interactor/enums/platform_types_enum.dart';
@@ -9,9 +11,10 @@ class PlatformInfoService implements IPlatformTypeService {
     required double availableWidth,
   }) {
     // If width < 760: Type = mobile, if width >= 760: Type = tablet, if width >= 1000: Type = desktop
-    if (availableWidth < 760) {
+    if (availableWidth < tabletReferenceWidth) {
       return PlatformTypesEnum.mobile;
-    } else if (availableWidth >= 760 && availableWidth < 1000) {
+    } else if (availableWidth >= mobileThreshold &&
+        availableWidth < tabletThreshold) {
       return PlatformTypesEnum.tablet;
     } else {
       return PlatformTypesEnum.desktop;
@@ -30,7 +33,6 @@ class PlatformInfoService implements IPlatformTypeService {
     // Calculate current figma canvas width and height based on platform type
     double figmaCanvasWidth = 1;
     double figmaCanvasHeight = 1;
-
     switch (platformType) {
       case PlatformTypesEnum.mobile:
         figmaCanvasWidth = mobileReferenceWidth;

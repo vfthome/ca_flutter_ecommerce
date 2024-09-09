@@ -5,8 +5,8 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../core/routes/routes.dart';
 import '../../../../shared/design_system/design_system.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import '../../../../shared/modules/haptic_feedback/interactor/services/i_haptics_service.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
 
 class AlreadyHaveAccount extends StatelessWidget {
   const AlreadyHaveAccount({

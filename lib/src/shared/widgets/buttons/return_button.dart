@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../design_system/design_system.dart';
-import '../../modules/responsive_layout/constants/k_figma_auto_scale.dart';
-import '../../modules/responsive_layout/constants/k_safe_area.dart';
+import '../../modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
+import '../../modules/responsive_layout/global_constants/k_safe_area.dart';
 import '../display_media/display_svg/display_svg.dart';
 import 'transparent_button.dart';
 

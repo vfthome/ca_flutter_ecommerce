@@ -1,7 +1,7 @@
 import '../../interactor/datasources/i_discount_remote_ds.dart';
 import '../../interactor/datasources/i_favorite_products_ds.dart';
 import '../../interactor/datasources/i_products_remote_ds.dart';
-import '../../interactor/dtos/products_dto.dart';
+import '../adapters/products_adapter.dart';
 import '../../interactor/entities/product_entity.dart';
 import '../../interactor/repositories/i_product_repository.dart';
 
@@ -35,7 +35,7 @@ class ProductsRepository implements IProductsRepository {
   }
 
   @override
-  Future<void> saveFavoriteProducts({required ProductsDTO products}) async {
+  Future<void> saveFavoriteProducts({required ProductsAdapter products}) async {
     throw UnimplementedError();
   }
 

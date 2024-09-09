@@ -3,7 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../design_system/design_system.dart';
-import '../../modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import 'transparent_button.dart';
 
 class BigButton extends StatelessWidget {

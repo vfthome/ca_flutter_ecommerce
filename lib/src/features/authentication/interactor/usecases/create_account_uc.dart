@@ -1,11 +1,11 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/authentication/interactor/services/i_auth_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../core/interactor/use_cases/i_use_cases.dart';
 import '../../../../core/routes/routes.dart';
 import '../repositories/i_auth_repository.dart';
+import '../services/i_auth_service.dart';
 
 class CreateAccountUseCase implements IUseCases {
   final IAuthRepository authRepository;

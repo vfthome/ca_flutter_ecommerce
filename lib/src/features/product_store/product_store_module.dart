@@ -1,5 +1,3 @@
-import 'package:ca_flutter_test/src/features/product_store/ui/pages/favorites_products_page.dart';
-import 'package:ca_flutter_test/src/features/product_store/ui/pages/product_description_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../core/core_module.dart';
@@ -18,6 +16,8 @@ import 'interactor/services/i_product_store_service.dart';
 import 'interactor/usecases/get_favorite_products_uc.dart';
 import 'interactor/usecases/get_more_products_uc.dart';
 import 'interactor/usecases/update_favorite_products_uc.dart';
+import 'ui/pages/favorites_products_page.dart';
+import 'ui/pages/product_description_page.dart';
 import 'ui/pages/product_store_page.dart';
 
 //* -------------------------------------------------------------------------------

@@ -1,8 +1,9 @@
-import 'package:ca_flutter_test/src/core/routes/routes.dart';
-import 'package:ca_flutter_test/src/features/authentication/interactor/services/i_auth_service.dart';
-import 'package:ca_flutter_test/src/shared/widgets/buttons/big_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../../core/routes/routes.dart';
+import '../../../../shared/widgets/buttons/big_button.dart';
+import '../../interactor/services/i_auth_service.dart';
 
 class LogoutButton extends StatelessWidget {
   const LogoutButton({

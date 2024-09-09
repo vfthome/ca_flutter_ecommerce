@@ -27,18 +27,17 @@ class GetMoreProductsUseCase implements IUseCases {
       set(isLoadingAtom, true);
     }).call();
 
-    // New products list
+    // Add old products to the new list
     final newProducts = [...productsAtom.state];
 
     // Fetches new products
     final response = await _repository.getProducts();
     debugPrint('products: ${response.toString()}');
-
-    // Updates current products state
     for (var element in response) {
       newProducts.add(element);
     }
 
+    // Updates current products state
     atomAction((set) {
       set(productsAtom, newProducts);
     }).call();

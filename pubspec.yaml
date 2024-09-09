@@ -219,6 +219,15 @@ flutter:
 #? Command used to generate the asset class with flutter_gen:
 #  dart run build_runner build
 #! ----------------------------------------------------------
+#! --------------------- TEST COVERAGE ----------------------
+#! ----------------------------------------------------------
+#? Command used to create a test coverage report folder:
+# flutter test --coverage  
+#? Generate HTML report:
+# genhtml coverage/lcov.info -o coverage/html
+#? Open the generated HTML report:
+# open coverage/html/index.html
+#! ----------------------------------------------------------
 #! ----------------------- APP NAME -------------------------
 #! ----------------------------------------------------------
 #? Command used to change the application name on the device:

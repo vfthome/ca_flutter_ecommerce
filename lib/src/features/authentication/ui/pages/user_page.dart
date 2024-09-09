@@ -1,18 +1,18 @@
 import 'package:asp/asp.dart';
-import 'package:ca_flutter_test/src/features/authentication/interactor/entities/user_entity.dart';
-import 'package:ca_flutter_test/src/features/authentication/ui/widgets/credits.dart';
-import 'package:ca_flutter_test/src/features/authentication/ui/widgets/logout_button.dart';
-import 'package:ca_flutter_test/src/shared/widgets/display_media/display_svg/display_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../shared/design_system/design_system.dart';
-import '../../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import '../../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
 import '../../../../shared/widgets/display_media/display_image/display_image.dart';
+import '../../../../shared/widgets/display_media/display_svg/display_svg.dart';
 import '../../../product_store/ui/widgets/top_menu_bar.dart';
+import '../../interactor/entities/user_entity.dart';
 import '../../interactor/services/i_auth_service.dart';
+import '../widgets/credits.dart';
 import '../widgets/delete_account_button.dart';
+import '../widgets/logout_button.dart';
 
 class UserPage extends StatelessWidget {
   const UserPage({super.key});

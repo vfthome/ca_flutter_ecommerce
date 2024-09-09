@@ -1,4 +1,4 @@
-import 'package:ca_flutter_test/src/features/product_store/interactor/dtos/products_dto.dart';
+import 'package:ca_flutter_test/src/features/product_store/data/adapters/products_adapter.dart';
 import 'package:ca_flutter_test/src/features/product_store/interactor/entities/product_entity.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -32,7 +32,7 @@ void main() {
       final String jsonMap =
           mockApi(jsonFileName: 'products_api_response.json');
       // act
-      final result = ProductsDTO.fromJson(jsonMap);
+      final result = ProductsAdapter.fromJson(jsonMap);
       // assert
       expect(result.products.toString(), products.toString());
     });
@@ -49,7 +49,7 @@ void main() {
       expectedString.addAll({'products': productsList});
 
       // act
-      final result = const ProductsDTO(products: products).toJson();
+      final result = const ProductsAdapter(products: products).toJson();
 
       // assert
       expect(result, expectedString);

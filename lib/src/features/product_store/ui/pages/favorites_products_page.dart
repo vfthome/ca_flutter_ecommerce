@@ -1,8 +1,8 @@
-import 'package:ca_flutter_test/src/features/product_store/ui/widgets/top_menu_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
 import '../widgets/filter_bar.dart';
+import '../widgets/top_menu_bar.dart';
 
 class FavoritesProductsPage extends StatelessWidget {
   const FavoritesProductsPage({super.key});

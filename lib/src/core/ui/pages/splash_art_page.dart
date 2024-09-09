@@ -5,7 +5,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../shared/design_system/design_system.dart';
-import '../../../shared/modules/responsive_layout/constants/k_figma_auto_scale.dart';
+import '../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import '../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
 import '../../../shared/widgets/display_media/display_svg/display_svg.dart';
 import '../../routes/routes.dart';
@@ -35,8 +35,8 @@ class _SplashArtState extends State<SplashArt>
     );
   }
 
+  // Calculate logo cart position and cropping animation.
   void calculateTweens() {
-    // Calculate cart position
     cartPosition = Tween<double>(
       begin: -1.6,
       end: 0.66,

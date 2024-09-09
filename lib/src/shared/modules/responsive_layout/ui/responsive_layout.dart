@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants/k_figma_auto_scale.dart';
-import '../constants/k_platform_info.dart';
+import '../global_constants/k_figma_auto_scale.dart';
+import '../global_constants/k_platform_info.dart';
 import '../data/services/platform_info_service.dart';
 import '../interactor/enums/platform_types_enum.dart';
 

@@ -21,14 +21,13 @@ class ProductStorePage extends StatefulWidget {
 
 class _ProductStorePageState extends State<ProductStorePage> {
   late final ScrollController _scrollController;
-  // Controller
   final viewController = Modular.get<IProductStoreService>();
 
+  //* INIT STATE METHOD
   @override
   void initState() {
     super.initState();
     _scrollController = ScrollController();
-
     //* Update products list when scroll reaches the end
     _scrollController.addListener(
       () {
@@ -39,17 +38,18 @@ class _ProductStorePageState extends State<ProductStorePage> {
         }
       },
     );
-
     //* Initial update
     viewController.getMoreProducts();
   }
 
+  //* DISPOSE METHOD
   @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
   }
 
+  //* BUILD METHOD
   @override
   Widget build(BuildContext context) {
     return ResponsiveLayout(
