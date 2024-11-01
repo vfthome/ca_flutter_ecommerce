@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../core/core_module.dart';
-import '../../core/routes/routes.dart';
+import '../../routes/routes.dart';
 import 'data/datasources/create_account_ds.dart';
 import 'data/datasources/delete_account_ds.dart';
 import 'data/datasources/login_ds.dart';

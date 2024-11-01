@@ -1,7 +1,7 @@
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../core/core_module.dart';
-import '../../core/routes/routes.dart';
+import '../../routes/routes.dart';
 import 'data/datasources/discount_remote_ds.dart';
 import 'data/datasources/favorite_products_ds.dart';
 import 'data/datasources/products_remote_ds.dart';

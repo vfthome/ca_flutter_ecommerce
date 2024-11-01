@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import '../../../../core/interactor/use_cases/i_use_cases.dart';
-import '../../../../core/routes/routes.dart';
+import '../../../../routes/routes.dart';
 import '../entities/auth_state_entity.dart';
 import '../repositories/i_auth_repository.dart';
 import '../services/i_auth_service.dart';

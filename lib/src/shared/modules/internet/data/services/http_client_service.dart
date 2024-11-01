@@ -4,7 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
-import '../../../../../core/routes/routes.dart';
+import '../../../../../routes/routes.dart';
 import '../../interactor/errors/request_error.dart';
 import '../../interactor/services/i_http_client_service.dart';
 import '../../interactor/services/i_internet_status_service.dart';

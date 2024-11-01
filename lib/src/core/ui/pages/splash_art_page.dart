@@ -8,7 +8,7 @@ import '../../../shared/design_system/design_system.dart';
 import '../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import '../../../shared/modules/responsive_layout/ui/responsive_layout.dart';
 import '../../../shared/widgets/display_media/display_svg/display_svg.dart';
-import '../../routes/routes.dart';
+import '../../../routes/routes.dart';
 
 class SplashArt extends StatefulWidget {
   const SplashArt({super.key});

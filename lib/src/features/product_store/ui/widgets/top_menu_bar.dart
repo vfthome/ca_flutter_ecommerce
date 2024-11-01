@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../../core/routes/routes.dart';
+import '../../../../routes/routes.dart';
 import '../../../../shared/design_system/design_system.dart';
 import '../../../../shared/modules/responsive_layout/global_constants/k_figma_auto_scale.dart';
 import '../../../../shared/widgets/buttons/return_button.dart';

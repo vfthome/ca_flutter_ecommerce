@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../../../core/routes/routes.dart';
+import '../../../../routes/routes.dart';
 import '../../../../shared/widgets/buttons/big_button.dart';
 import '../../interactor/services/i_auth_service.dart';
 
