@@ -1,4 +1,7 @@
 # Controle seu negócio e ganhe tempo como ERP Conta Azul
+![Conta Azul Flutter Test - 1](https://github.com/user-attachments/assets/0cc81b7b-79b4-45f3-a201-44f49b7634b8)
+<img width="1728" alt="Conta Azul Flutter Test - 2" src="https://github.com/user-attachments/assets/89d12456-252d-40c1-809d-beaafb44fbcd">
+
 
 ## Flutter Test - GitHub Repository (you should create a fork)
 
